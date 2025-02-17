@@ -1,26 +1,30 @@
-# 🎨 Voronoi Diagram Generator (8086/87 Assembly)  
+# 🎨 Générateur de Diagramme de Voronoï (8086/87 Assembleur)  
 
-A **simple Voronoi diagram generator** written in **8086/87 assembly** using **VGA graphics mode 13h**. This program demonstrates a basic (though computationally inefficient) approach to generating **Voronoi diagrams** through **brute force distance calculation**.  
+Un **générateur de diagramme de Voronoï** écrit en **assembleur 8086/87** utilisant le **mode graphique VGA 13h**. Ce programme démontre une **méthode brute** (bien que peu efficace) pour générer des **diagrammes de Voronoï** à l'aide de **calculs de distances**.  
+
+---
 
 ## 📜 Description  
 
-🖼️ This program generates a **Voronoi diagram** by:  
-1️⃣ Creating **50 random points** on the screen 🎯  
-2️⃣ Computing the **closest point** for each pixel using **distance calculations** 📏  
-3️⃣ Coloring regions based on their closest point 🎨  
-4️⃣ Displaying the result in **VGA graphics mode (320x200 resolution)** 🖥️  
+🖼️ Ce programme génère un **diagramme de Voronoï** en :  
+1️⃣ Créant **50 points aléatoires** sur l'écran 🎯  
+2️⃣ Calculant le **point le plus proche** pour chaque pixel grâce aux **distances euclidiennes** 📏  
+3️⃣ Colorant les régions en fonction du point le plus proche 🎨  
+4️⃣ Affichant le résultat en **mode graphique VGA (320x200 pixels)** 🖥️  
 
-## ⚙️ Prerequisites  
+---
 
-🔧 **Required Software:**  
-- **NASM** (Netwide Assembler) for compiling the assembly code 🛠️  
-- **DOSBox** for running the compiled program (since this is a **DOS real-mode** program) 💾  
+## ⚙️ Prérequis  
+
+🔧 **Logiciels requis :**  
+- **NASM** (Netwide Assembler) pour compiler le code assembleur 🛠️  
+- **DOSBox** pour exécuter le programme compilé (car c'est un programme DOS en mode réel) 💾  
 
 ---
 
 ## 🏗️ Compilation  
 
-To compile the program, use **NASM** with the following command:  
+Pour compiler le programme, utilisez **NASM** avec la commande suivante :  
 
 ```bash
 nasm voronoi.asm -o voronoi.com -f bin
@@ -28,21 +32,21 @@ nasm voronoi.asm -o voronoi.com -f bin
 
 ---
 
-## 💻 Installation & Usage (Platform-Specific)  
+## 💻 Installation & Utilisation (Selon le Système d’Exploitation)  
 
 ### 🏁 Windows  
 
-1️⃣ **Install DOSBox** from the [official website](https://www.dosbox.com/download.php?main=1)  
-2️⃣ **Install NASM** from [NASM's website](https://www.nasm.us/)  
-3️⃣ **Add NASM to your system's PATH**  
-4️⃣ **Create a directory** for DOS programs (e.g., `C:\dosprogs`)  
-5️⃣ **Copy `voronoi.asm`** to this directory  
-6️⃣ **Mount the directory in DOSBox**:  
+1️⃣ **Installez DOSBox** depuis le [site officiel](https://www.dosbox.com/download.php?main=1)  
+2️⃣ **Installez NASM** depuis [le site de NASM](https://www.nasm.us/)  
+3️⃣ **Ajoutez NASM au PATH de votre système**  
+4️⃣ **Créez un dossier** pour vos programmes DOS (ex. `C:\dosprogs`)  
+5️⃣ **Copiez `voronoi.asm`** dans ce dossier  
+6️⃣ **Montez le dossier dans DOSBox** :  
    ```dos
    mount c c:\dosprogs
    c:
    ```
-7️⃣ **Compile & Run**:  
+7️⃣ **Compilez & Exécutez** :  
    ```dos
    nasm voronoi.asm -o voronoi.com -f bin
    voronoi.com
@@ -52,25 +56,25 @@ nasm voronoi.asm -o voronoi.com -f bin
 
 ### 🍏 macOS  
 
-1️⃣ **Install DOSBox** using Homebrew:  
+1️⃣ **Installez DOSBox** avec Homebrew :  
    ```bash
    brew install dosbox
    ```  
-2️⃣ **Install NASM**:  
+2️⃣ **Installez NASM** :  
    ```bash
    brew install nasm
    ```  
-3️⃣ **Create a directory** for DOS programs:  
+3️⃣ **Créez un dossier** pour vos programmes DOS :  
    ```bash
    mkdir ~/dosprogs
    ```  
-4️⃣ **Copy `voronoi.asm`** to this directory  
-5️⃣ **Launch DOSBox & Mount the directory**:  
+4️⃣ **Copiez `voronoi.asm`** dans ce dossier  
+5️⃣ **Lancez DOSBox & montez le dossier** :  
    ```dos
    mount c ~/dosprogs
    c:
    ```
-6️⃣ **Compile & Run**:  
+6️⃣ **Compilez & Exécutez** :  
    ```dos
    nasm voronoi.asm -o voronoi.com -f bin
    voronoi.com
@@ -80,7 +84,7 @@ nasm voronoi.asm -o voronoi.com -f bin
 
 ### 🐧 Linux  
 
-1️⃣ **Install DOSBox** using your package manager:  
+1️⃣ **Installez DOSBox** avec votre gestionnaire de paquets :  
    ```bash
    # Ubuntu/Debian
    sudo apt-get install dosbox
@@ -91,7 +95,7 @@ nasm voronoi.asm -o voronoi.com -f bin
    # Arch Linux
    sudo pacman -S dosbox
    ```  
-2️⃣ **Install NASM**:  
+2️⃣ **Installez NASM** :  
    ```bash
    # Ubuntu/Debian
    sudo apt-get install nasm
@@ -102,17 +106,17 @@ nasm voronoi.asm -o voronoi.com -f bin
    # Arch Linux
    sudo pacman -S nasm
    ```  
-3️⃣ **Create a directory** for DOS programs:  
+3️⃣ **Créez un dossier** pour vos programmes DOS :  
    ```bash
    mkdir ~/dosprogs
    ```  
-4️⃣ **Copy `voronoi.asm`** to this directory  
-5️⃣ **Launch DOSBox & Mount the directory**:  
+4️⃣ **Copiez `voronoi.asm`** dans ce dossier  
+5️⃣ **Lancez DOSBox & montez le dossier** :  
    ```dos
    mount c ~/dosprogs
    c:
    ```
-6️⃣ **Compile & Run**:  
+6️⃣ **Compilez & Exécutez** :  
    ```dos
    nasm voronoi.asm -o voronoi.com -f bin
    voronoi.com
@@ -120,53 +124,53 @@ nasm voronoi.asm -o voronoi.com -f bin
 
 ---
 
-## ▶️ Program Execution  
+## ▶️ Exécution du Programme  
 
-📌 **Once running, the program will:**  
-✔️ Switch to **VGA graphics mode** (Mode 13h) 🖥️  
-✔️ Generate **50 random points** 🎯  
-✔️ Compute and **display the Voronoi diagram** 🎨  
-✔️ Mark generator points in **black** ⚫  
+📌 **Une fois en cours d'exécution, le programme va :**  
+✔️ Passer en **mode graphique VGA (13h)** 🖥️  
+✔️ Générer **50 points aléatoires** 🎯  
+✔️ Calculer et **afficher le diagramme de Voronoï** 🎨  
+✔️ Marquer les **points générateurs** en **noir** ⚫  
 
-🛑 **Press any key to exit the program.**  
-
----
-
-## 🔧 Troubleshooting  
-
-⚠️ **If DOSBox runs too fast/slow**, adjust CPU cycles using:  
-   - **Ctrl + F11** to decrease speed  
-   - **Ctrl + F12** to increase speed  
-
-⚠️ **If `nasm` is not found**, make sure it's correctly installed and added to your system's PATH.  
-
-⚠️ **For graphics issues**, try adjusting DOSBox's display settings in the configuration file (`dosbox.conf`).  
+🛑 **Appuyez sur une touche pour quitter le programme.**  
 
 ---
 
-## 🔬 Technical Details  
+## 🔧 Dépannage  
 
-- **Resolution:** 🖥️ 320x200 pixels (VGA mode 13h)  
-- **Number of points:** 50 (**defined by `POINTS_COUNT`**)  
-- **Uses** 🏗️ **8087 FPU** for floating-point calculations  
-- **Implements** a **brute-force method** for distance calculations 📏  
+⚠️ **Si DOSBox est trop rapide ou trop lent**, ajustez la vitesse avec :  
+   - **Ctrl + F11** pour ralentir  
+   - **Ctrl + F12** pour accélérer  
 
----
+⚠️ **Si `nasm` n'est pas reconnu**, assurez-vous qu'il est bien installé et ajouté au PATH du système.  
 
-## 📚 About Voronoi Diagrams  
-
-A **Voronoi diagram** is a partitioning of a plane into **regions based on distance** to points in a specific subset of the plane.  
-
-Each **region (Voronoi cell)** consists of all points closer to a specific **generator point** than to any other point.  
-
-This concept has applications in:  
-🔹 **Computer Graphics**  
-🔹 **Geographic Information Systems (GIS)**  
-🔹 **Machine Learning**  
-🔹 **Clustering Analysis**  
+⚠️ **Si vous rencontrez des problèmes graphiques**, essayez de modifier les paramètres d'affichage dans le fichier de configuration de DOSBox (`dosbox.conf`).  
 
 ---
 
-## 📝 License  
+## 🔬 Détails Techniques  
 
-📜 This project is **open-source** under the **MIT License**.
+- **Résolution :** 🖥️ 320x200 pixels (**mode VGA 13h**)  
+- **Nombre de points :** 50 (**défini par `POINTS_COUNT`**)  
+- **Utilise** 🏗️ **le coprocesseur 8087** pour les calculs en virgule flottante  
+- **Méthode brute** pour calculer les distances 📏  
+
+---
+
+## 📚 À propos des Diagrammes de Voronoï  
+
+Un **diagramme de Voronoï** est une division d’un plan en **régions basées sur la distance** à certains points de référence.  
+
+Chaque **région (cellule de Voronoï)** contient tous les points qui sont **plus proches** d'un certain **point générateur** que de tout autre point.  
+
+🔹 **Applications :**  
+✔️ **Graphisme informatique** 🎨  
+✔️ **Systèmes d'information géographique (SIG)** 🗺️  
+✔️ **Apprentissage automatique** 🤖  
+✔️ **Analyse de regroupement (clustering)** 📊  
+
+---
+
+## 📝 Licence  
+
+📜 Ce projet est **open-source** sous la **Licence MIT**.
