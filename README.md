@@ -163,12 +163,6 @@ Un **diagramme de Voronoï** est une division d’un plan en **régions basées 
 
 Chaque **région (cellule de Voronoï)** contient tous les points qui sont **plus proches** d'un certain **point générateur** que de tout autre point.  
 
-🔹 **Applications :**  
-✔️ **Graphisme informatique** 🎨  
-✔️ **Systèmes d'information géographique (SIG)** 🗺️  
-✔️ **Apprentissage automatique** 🤖  
-✔️ **Analyse de regroupement (clustering)** 📊  
-
 ---
 
 ## 📝 Licence  
