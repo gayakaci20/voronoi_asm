@@ -5,15 +5,23 @@
 bits 16                     ; Code 16-bit
 org 100h                    ; Format de fichier COM, le code commence à l'offset 100h
 
-; Constantes
-POINTS_COUNT equ 50         ; Nombre de points aléatoires à générer
+;-------------------------------------------------------------------------------
+; Constantes et Configuration
+;-------------------------------------------------------------------------------
+POINTS_COUNT    equ 50     ; Nombre de points aléatoires à générer
+SCREEN_WIDTH    equ 320    ; Largeur de l'écran en mode 13h
+SCREEN_HEIGHT   equ 200    ; Hauteur de l'écran en mode 13h
+VIDEO_SEGMENT   equ 0a000h ; Segment mémoire vidéo pour le mode 13h
+VGA_MODE        equ 13h    ; Mode vidéo VGA 320x200 256 couleurs
+BASE_COLOR      equ 30     ; Couleur de base pour les régions
+POINT_COLOR     equ 0      ; Couleur pour les points (noir)
 
 ;-------------------------------------------------------------------------------
 ; Section des Données
 ;-------------------------------------------------------------------------------
 section .data
 start:                      ; Point d'entrée du programme
-        finit
+        finit               ; Initialiser le coprocesseur mathématique
         call demarrer_mode_graphique
         call generer_points_aleatoires
         call dessiner_voronoi
