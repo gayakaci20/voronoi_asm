@@ -34,7 +34,7 @@ nasm voronoi.asm -o voronoi.com -f bin
 
 ## 💻 Installation & Utilisation (Selon le Système d’Exploitation)  
 
-### 🏁 Windows  
+### ⊞ Windows  
 
 1️⃣ **Installez DOSBox** depuis le [site officiel](https://www.dosbox.com/download.php?main=1)  
 2️⃣ **Installez NASM** depuis [le site de NASM](https://www.nasm.us/)  
